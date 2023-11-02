@@ -1,8 +1,13 @@
 /*@import url('https://fonts.googleapis.com/css2? family= Rajdhani:wght@300;400;500;600;700 & display=swap'); */
+/*@import url('https://fonts.googleapis.com/css2? family= Space+Grotesk:wght@300;400;500;600;700 & display=swap');*/
 
-font-face {
+@font-face {
     font-family: 'Rajdhani';
-    src: url(./police/Rajdhani-Medium.tff);
+    src: url(./police/Rajdhani-Medium.ttf);
+}
+
+.ho0{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 :root{
@@ -10,6 +15,10 @@ font-face {
     --yellow-light: #f8f184;
     --blue-color: #19587d;
     --white-color: #fff;
+    --gradient-white: #EDDEBF;
+    --gradient-red: #890008;
+    --black-color: black;
+    --grey-color: #C4C4C4;
 }
 *{
     margin: 0;
@@ -18,12 +27,12 @@ font-face {
 }
 
 h1{
-    font-family: 'rajdhani';
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 36px;
     font-weight: 400;
 }
 button{
-    font-family: 'rajdhani';
+    font-family: 'Rajdhani';
     font-size: 20px;
     font-weight: 400;
 }
@@ -31,6 +40,12 @@ button{
 .container{
     width: 80%;
     margin: 0 auto;
+}
+.description{
+    margin-bottom: 40px;
+    text-align: justify;
+    width: 80%;
+    font-size: 21px;
 }
 
 
@@ -70,13 +85,122 @@ nav ul a:hover{
 
 #hero{
     background-image: url(../Illustrations/Bathome1.png);
-    height: 800px;
+    height: 1000px;
     background-size: cover;
+    margin-top: -100px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 350px;
+}
+#hero .titre{
+    margin: 20px 0;
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 22px;
+    padding: 10px 40px;
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-red)
+    );
+    box-shadow: var(--black-color) 15px 15px 50px;
+}
+
+#hero .fleche{
+    display: block;
+    margin: 0 auto;
+    margin-top: 450px;
+}
+
+.scroll{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 80px;
+    top: 230px;
+}
+.scroll .social{
+    margin-top: 15px;
 }
 
 /*Design de la section batman personnage*/
 
 .batman-personnage{
     display: flex;
+    margin: 40px;
+    padding: 20px;
     justify-content: space-between;
+}
+.nom{
+    text-align: center;
+    margin-top: 20px;
+}
+
+#batman-cinema .titre{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+/*Design de la partie nemesis*/
+
+.enemis{
+    display: flex;
+    margin: 40px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+/*Design de la partie alliés*/
+
+.alli{
+    display: flex;
+    margin: 40px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.Ali{
+    display: flex;
+    justify-content: space-between;
+}
+.Ali .bat1{
+    margin-top: 300px;
+}
+
+/*Design de la partie Justice league*/
+
+#JUL{
+    background-image: url(../Illustrations/Bathome11.png);
+    height: 600px;
+    background-size: cover;
+    margin: -200px;
+    margin-top: 80px;
+}
+
+#mult{
+    margin-top: 250px;
+}
+#mult .slider-multimedia{
+    display: flex;
+    width: 60%;
+    margin: 40px auto;
+}
+
+#mult .slider-image{
+    width: 100%;
+}
+
+#mult .slider-content{
+    padding: 15px;
+    background-color: var(--grey-color);
 }
